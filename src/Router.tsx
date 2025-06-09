@@ -4,6 +4,8 @@ import { Error404 } from "./pages/Error404";
 import { Home } from "./pages/Home";
 import { Animals } from "./pages/Animals";
 import { Animal } from "./pages/Animal";
+import { animalsLoader } from "./loaders/animalsLoader";
+import { animalLoader } from "./loaders/animalLoader";
 
 export const router = createBrowserRouter([{
     path: "/",
@@ -16,11 +18,13 @@ export const router = createBrowserRouter([{
         },
         {
             path: "/animals",
-            element: <Animals />
+            element: <Animals />,
+            loader: animalsLoader
         },
         {
             path: "/animals/:id",
-            element: <Animal />
+            element: <Animal />,
+            loader: animalLoader
         }
     ]
 }]);
