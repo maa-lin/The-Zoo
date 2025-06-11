@@ -1,8 +1,8 @@
 import { getAnimals } from "../services/animalService"
 
 export const animalsLoader = async () => {
-    const animals = await getAnimals();
+    const animalList = await getAnimals();
 
-    return { animals };
+    return { animalList };
 };
 
