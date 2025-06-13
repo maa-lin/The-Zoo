@@ -1,9 +1,11 @@
 $font-title: "Englebert", cursive;
 $font-text: "Roboto", sans-serif;
 $font-logo: "Original surfer", sans-serif;
+$font-size-xs: 0.8rem;
 $font-size-s: 1rem;
 $font-size-m: 1.5rem;
 $font-size-lg: 2rem;
+$font-size-xl: 3rem;
 $font-size-icons: 3rem;
 
 $spacing-xs: 0.3rem;
@@ -12,5 +14,8 @@ $spacing-m: 1rem;
 $spacing-lg: 1.5rem;
 $spacing-xl: 2rem;
 
-$background-color-heading: rgb(250, 81, 47);
+$color-red: rgb(250, 81, 47);
+$color-darkgreen: rgb(41, 62, 25);
+$color-lightgreen: rgb(109, 163, 65);
+$color-lightbrown: rgb(185, 128, 53);
 $color-text: rgb(255, 255, 255);

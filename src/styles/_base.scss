@@ -9,13 +9,46 @@
 
 #root {
   display: flex;
+  background-image: url("../assets/pexels-jplenio-1423600.jpg");
+  background-size: cover;
+  background-position: bottom right;
+  background-repeat: no-repeat;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  min-height: 100dvh;
+  height: 100dvh;
   font-size: $font-size-s;
   font-family: $font-text;
   scroll-behavior: smooth;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: $font-size-xl;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  padding: $spacing-s $spacing-lg;
+}
+
+h2 {
+  display: inline-block;
+  font-family: $font-title;
+  font-size: $spacing-lg;
+  font-weight: normal;
+  color: $color-text;
+  background-color: $color-red;
+  padding: $spacing-s $spacing-m;
+  transform: skew(-20deg);
+  margin: $spacing-m;
+}
+
+.h2--unskewd {
+  display: inline-block;
+  transform: skew(20deg);
 }
 
 a {

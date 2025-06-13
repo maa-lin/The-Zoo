@@ -1,0 +1,24 @@
+@use "../../styles/variables";
+
+.animal-card {
+  display: flex;
+  width: 500px;
+  background-color: rgb(243, 237, 208);
+  padding: variables.$spacing-lg;
+}
+
+.animal-card__img-container {
+  width: 40%;
+  margin-right: variables.$spacing-m;
+
+  img {
+    width: 100%;
+  }
+}
+
+.animal-card__info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 60%;
+}

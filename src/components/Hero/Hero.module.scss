@@ -1,0 +1,41 @@
+@use "../../styles/variables";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100dvh - 75px);
+}
+
+.hero__title {
+  background-color: variables.$color-darkgreen;
+  transform: skew(-20deg);
+}
+
+.hero__title--unskewd {
+  display: inline-block;
+  transform: skew(20deg);
+}
+
+.hero__button {
+  font-size: variables.$font-size-m;
+  padding: variables.$spacing-s variables.$spacing-m;
+  margin: variables.$spacing-lg;
+  background-color: variables.$color-lightgreen;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgb(53, 68, 51);
+  transition: background-color 0.3s ease-in-out;
+
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transform: none;
+  }
+
+  &:hover {
+    background-color: variables.$color-lightbrown;
+  }
+}

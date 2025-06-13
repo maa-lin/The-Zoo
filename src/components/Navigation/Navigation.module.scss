@@ -14,12 +14,17 @@
     }
 
     a {
-      color: rgb(66, 74, 60);
+      color: variables.$color-darkgreen;
       text-decoration: none;
+
+      svg {
+        font-size: variables.$font-size-xs;
+        margin-right: 5px;
+      }
     }
 
     .active {
-      border-bottom: 2px solid variables.$background-color-heading;
+      border-bottom: 2px solid variables.$color-red;
       transform: none;
     }
   }

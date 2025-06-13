@@ -1,23 +1,28 @@
 @use "../../styles/variables";
 
 .logo {
-  display: flex;
-  align-items: flex-end;
   font-family: variables.$font-text;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 2px;
-  color: rgb(66, 74, 60);
+
+  a {
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    transform: none;
+    color: variables.$color-darkgreen;
+  }
 
   &__icon {
     font-size: variables.$font-size-icons;
     margin-right: variables.$spacing-s;
-    color: rgb(66, 74, 60);
+    color: variables.$color-darkgreen;
   }
 
   &__text {
-    border-top: 2px solid rgb(66, 74, 60);
-    border-bottom: 5px solid rgb(66, 74, 60);
+    border-top: 2px solid variables.$color-darkgreen;
+    border-bottom: 5px solid variables.$color-darkgreen;
     padding: variables.$spacing-xs 0;
     font-size: variables.$font-size-m;
   }
