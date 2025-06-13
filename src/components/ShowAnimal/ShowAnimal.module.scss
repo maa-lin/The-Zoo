@@ -19,6 +19,43 @@
 .animal-card__info {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   text-align: left;
   width: 60%;
+
+  p {
+    margin-bottom: variables.$spacing-s;
+  }
+}
+
+.animal-card__status {
+  font-size: variables.$font-size-xs;
+
+  span {
+    font-weight: 600;
+  }
+
+  strong {
+    font-weight: normal;
+    color: green;
+  }
+}
+
+.animal-card__btn {
+  align-self: flex-end;
+  font-size: variables.$font-size-s;
+  width: 150px;
+  margin-top: variables.$spacing-m;
+  padding: variables.$spacing-s;
+  border: none;
+  border-radius: 5px;
+  background-color: variables.$color-lightgreen;
+  color: variables.$color-text;
+  box-shadow: 2px 2px 4px grey;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(113, 211, 83);
+  }
 }

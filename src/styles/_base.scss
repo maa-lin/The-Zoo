@@ -43,7 +43,7 @@ h2 {
   background-color: $color-red;
   padding: $spacing-s $spacing-m;
   transform: skew(-20deg);
-  margin: $spacing-m;
+  margin: 0 0 $spacing-m $spacing-s;
 }
 
 .h2--unskewd {
