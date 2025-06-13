@@ -1,0 +1,24 @@
+@use "../../styles/variables";
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  font-family: variables.$font-text;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgb(66, 74, 60);
+
+  &__icon {
+    font-size: variables.$font-size-icons;
+    margin-right: variables.$spacing-s;
+    color: rgb(66, 74, 60);
+  }
+
+  &__text {
+    border-top: 2px solid rgb(66, 74, 60);
+    border-bottom: 5px solid rgb(66, 74, 60);
+    padding: variables.$spacing-xs 0;
+    font-size: variables.$font-size-m;
+  }
+}

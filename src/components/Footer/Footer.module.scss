@@ -6,7 +6,7 @@
   align-items: flex-end;
   background-image: linear-gradient(
       to bottom,
-      rgb(130, 95, 173) 0,
+      rgb(243, 239, 224) 0,
       transparent 50%
     ),
     url("../../assets/pexels-pixabay-159414.jpg");
@@ -57,6 +57,7 @@
   display: inline-block;
   font-family: variables.$font-title;
   font-size: 1.5rem;
+  font-weight: normal;
   color: variables.$color-text;
   background-color: variables.$background-color-heading;
   padding: variables.$spacing-s variables.$spacing-m;

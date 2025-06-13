@@ -1,0 +1,26 @@
+@use "../../styles/variables";
+
+.navigation {
+  display: flex;
+  list-style: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  li {
+    margin-right: variables.$spacing-lg;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      color: rgb(66, 74, 60);
+      text-decoration: none;
+    }
+
+    .active {
+      border-bottom: 2px solid variables.$background-color-heading;
+      transform: none;
+    }
+  }
+}
