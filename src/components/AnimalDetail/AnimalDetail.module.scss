@@ -1,0 +1,72 @@
+@use "../../styles/variables";
+
+.animal-card {
+  display: flex;
+  width: 100%;
+  height: calc(100dvh - 75px - variables.$spacing-xl - variables.$spacing-xl);
+  background-color: rgb(243, 237, 208);
+  padding: variables.$spacing-lg;
+}
+
+.animal-card__img-container {
+  width: 40%;
+  margin-right: variables.$spacing-m;
+
+  img {
+    width: 100%;
+  }
+}
+
+.animal-card__info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 60%;
+
+  p {
+    margin-bottom: variables.$spacing-s;
+  }
+}
+
+.animal-card__status {
+  font-size: variables.$font-size-s;
+
+  list-style: none;
+
+  li {
+    margin: variables.$spacing-xs;
+
+    &:last-child {
+      margin-top: variables.$spacing-lg;
+    }
+  }
+
+  span {
+    font-weight: 600;
+  }
+
+  strong {
+    font-weight: normal;
+    color: green;
+  }
+}
+
+.animal-card__btn {
+  align-self: flex-end;
+  font-size: variables.$font-size-s;
+  width: 150px;
+  margin-top: variables.$spacing-m;
+  padding: variables.$spacing-s;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: variables.$color-lightgreen;
+  color: variables.$color-text;
+  box-shadow: 2px 2px 4px grey;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(113, 211, 83);
+  }
+}

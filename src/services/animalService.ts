@@ -1,7 +1,7 @@
 import type { IAnimal } from "../models/IAnimal";
 import { get } from "./baseService";
 
-const BASE_URL = "https://animals.azurewebsites.net/api/animals";
+const BASE_URL = "https://animals.azurewebsites.net/api/animals/";
 
 export const getAnimals = async () => {
     const response = get<IAnimal[]>(BASE_URL);
@@ -10,7 +10,7 @@ export const getAnimals = async () => {
 };
 
 export const getAnimal = async (id: number) => {
-    const response = get<IAnimal>(BASE_URL + id);
+    const response = await get<IAnimal>(BASE_URL + id);
 
     return response;
 };
