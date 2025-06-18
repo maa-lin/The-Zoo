@@ -15,7 +15,7 @@ function App() {
 
       return parsedAnimals.map((p) => {
         const lastFed = new Date(p.lastFed).getTime();
-        const isFed = now - lastFed < 2 * 60 * 1000;
+        const isFed = now - lastFed < 4 * 60 * 60 * 1000;
         return { ...p, isFed };
       });
     }

@@ -33,7 +33,7 @@ export const AnimalDetail = () => {
         type: AnimalActionTypes.RESET_FED,
         payload: id,
       });
-    }, 2 * 60 * 1000);
+    }, 4 * 60 * 60 * 1000);
   };
 
   const handleClickPet = () => {

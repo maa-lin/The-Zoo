@@ -22,7 +22,7 @@ export const AnimalReducer = (animals: IAnimal[], action: AnimalAction) => {
 
       const updatedAnimals = animalsToAdd.map((a) => {
         const lastFed = new Date(a.lastFed).getTime();
-        const isFed = now - lastFed < 2 * 60 * 1000;
+        const isFed = now - lastFed < 4 * 60 * 60 * 1000;
 
         return { ...a, isFed };
       });
