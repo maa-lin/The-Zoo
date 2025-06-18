@@ -8,9 +8,3 @@ export const getAnimals = async () => {
 
     return response;
 };
-
-export const getAnimal = async (id: number) => {
-    const response = await get<IAnimal>(BASE_URL + id);
-
-    return response;
-};

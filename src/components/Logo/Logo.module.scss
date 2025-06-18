@@ -27,3 +27,18 @@
     font-size: variables.$font-size-m;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .logo {
+    a {
+      align-items: center;
+    }
+
+    &__icon {
+      font-size: variables.$font-size-lg;
+    }
+    &__text {
+      font-size: variables.$font-size-s;
+    }
+  }
+}

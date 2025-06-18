@@ -3,7 +3,6 @@
 .animal-card {
   display: flex;
   width: 100%;
-  height: calc(100dvh - 75px - variables.$spacing-xl - variables.$spacing-xl);
   background-color: rgb(243, 237, 208);
   padding: variables.$spacing-lg;
 }
@@ -30,11 +29,10 @@
 
 .animal-card__status {
   font-size: variables.$font-size-s;
-
   list-style: none;
 
   li {
-    margin: variables.$spacing-xs;
+    margin: variables.$spacing-xs 0;
 
     &:last-child {
       margin-top: variables.$spacing-lg;
@@ -47,26 +45,69 @@
 
   strong {
     font-weight: normal;
-    color: green;
   }
 }
 
-.animal-card__btn {
+.animal-card__btn-container {
   align-self: flex-end;
+}
+
+.animal-card__btn {
   font-size: variables.$font-size-s;
   width: 150px;
   margin-top: variables.$spacing-m;
+  margin-left: variables.$spacing-m;
   padding: variables.$spacing-s;
-  margin: 0;
+  margin-top: auto;
   border: none;
   border-radius: 5px;
-  background-color: variables.$color-lightgreen;
+  background-color: variables.$color-btn;
   color: variables.$color-text;
   box-shadow: 2px 2px 4px grey;
   transition: background-color 0.3s ease-in;
   cursor: pointer;
 
   &:hover {
-    background-color: rgb(113, 211, 83);
+    background-color: variables.$color-btn-hover;
+  }
+}
+
+.animal-card__btn--hungry {
+  background-color: rgb(159, 154, 146);
+
+  &:hover {
+    background-color: rgb(159, 154, 146);
+  }
+}
+
+.animal-card__error-message {
+  visibility: hidden;
+  text-align: right;
+  font-size: variables.$font-size-s;
+  color: rgb(186, 87, 87);
+  margin-bottom: variables.$spacing-s;
+  font-weight: 300;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.animal-card__error-message--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .animal-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animal-card__img-container {
+    width: 60%;
+    margin-bottom: variables.$spacing-m;
+  }
+
+  .animal-card__info {
+    width: 100%;
   }
 }

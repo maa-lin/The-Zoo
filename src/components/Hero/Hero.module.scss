@@ -22,7 +22,7 @@
   font-size: variables.$font-size-m;
   padding: variables.$spacing-s variables.$spacing-m;
   margin: variables.$spacing-lg;
-  background-color: variables.$color-lightgreen;
+  background-color: variables.$color-btn;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -31,11 +31,25 @@
 
   a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: variables.$color-text;
     transform: none;
   }
 
   &:hover {
     background-color: variables.$color-lightbrown;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: calc(100dvh - 100px);
+  }
+
+  h1 {
+    font-size: variables.$font-size-lg;
+  }
+
+  .hero__title {
+    text-align: center;
   }
 }

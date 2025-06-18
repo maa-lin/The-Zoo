@@ -2,8 +2,7 @@
 
 .animal-card {
   display: flex;
-  width: 500px;
-  background-color: rgb(243, 237, 208);
+  background-color: variables.$color-beige;
   padding: variables.$spacing-lg;
 }
 
@@ -19,7 +18,6 @@
 .animal-card__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align: left;
   width: 60%;
 
@@ -37,12 +35,12 @@
 
   strong {
     font-weight: normal;
-    color: green;
   }
 }
 
 .animal-card__btn {
   align-self: flex-end;
+  margin-top: auto;
 
   &:hover {
     transform: none;
@@ -55,14 +53,31 @@
     padding: variables.$spacing-s;
     border: none;
     border-radius: 5px;
-    background-color: variables.$color-lightgreen;
+    background-color: variables.$color-btn;
     color: variables.$color-text;
     box-shadow: 2px 2px 4px grey;
     transition: background-color 0.3s ease-in;
     cursor: pointer;
 
     &:hover {
-      background-color: rgb(113, 211, 83);
+      background-color: variables.$color-btn-hover;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .animal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: variables.$spacing-s;
+    padding: variables.$spacing-lg;
+  }
+
+  .animal-card__info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
   }
 }

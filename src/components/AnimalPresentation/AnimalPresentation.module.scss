@@ -5,4 +5,12 @@
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
   gap: variables.$spacing-xl;
+  margin: 0 variables.$spacing-lg;
+}
+
+@media screen and (max-width: 768px) {
+  .animals-container {
+    grid-template-columns: 1fr;
+    gap: variables.$spacing-lg;
+  }
 }

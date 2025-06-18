@@ -17,7 +17,7 @@
 }
 
 .error__text {
-  margin-top: 4rem;
+  margin-top: variables.$spacing-xxl;
 
   h1 {
     padding: 0;
@@ -33,5 +33,17 @@
     margin-top: variables.$spacing-m;
     color: variables.$color-lightbrown;
     transform: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .error__text {
+    h1 {
+      margin-bottom: variables.$spacing-s;
+    }
+
+    p {
+      font-size: variables.$font-size-s;
+    }
   }
 }

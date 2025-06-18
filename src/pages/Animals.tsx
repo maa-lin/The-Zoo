@@ -11,14 +11,17 @@ type AnimalList = {
 export const Animals = () => {
 
     const { animalList } = useLoaderData() as AnimalList;
-    const { dispatch } = useContext(AnimalContext);
+    const { animals, dispatch } = useContext(AnimalContext);
 
     useEffect( () => {
-        dispatch({
-            type: "SET_ANIMALS",
-            payload: JSON.stringify(animalList)
-        });
-    }, [dispatch, animalList]
+
+        if (animals.length === 0 && animalList.length > 0) {
+            dispatch({
+                type: "SET_ANIMALS",
+                payload: JSON.stringify(animalList)
+            })
+        }
+        }, [dispatch, animalList, animals.length]
     );
 
     return <>

@@ -3,6 +3,7 @@ import type { IAnimal } from "../../models/IAnimal";
 import styles from "./ShowAnimal.module.scss";
 import { useState } from "react";
 import { FaPaw } from "react-icons/fa";
+import { statusMessages } from "../../helpers/statusHelpers";
 
 type ShowAnimalProps = {
   animal: IAnimal;
@@ -10,6 +11,8 @@ type ShowAnimalProps = {
 
 export const ShowAnimals = (props: ShowAnimalProps) => {
   const [brokenImg, setBrokenImg] = useState(false);
+
+  const status = statusMessages(props.animal);
 
   return (
     <div className={styles["animal-card"]}>
@@ -22,7 +25,7 @@ export const ShowAnimals = (props: ShowAnimalProps) => {
           />
         ) : (
           <div className="img-placeholder">
-            <FaPaw className={styles.icon} />
+            <FaPaw />
             <span>No image</span>
           </div>
         )}
@@ -34,7 +37,7 @@ export const ShowAnimals = (props: ShowAnimalProps) => {
         <p>{props.animal.shortDescription}</p>
         <div className={styles["animal-card__status"]}>
           <span>Status: </span>
-          <strong>{props.animal.name} har nyss ätit mat</strong>
+          <strong className={status.class}>{props.animal.name} {status.message}</strong>
         </div>
         <NavLink
           to={`/animals/${props.animal.id}`}

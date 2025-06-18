@@ -5,7 +5,6 @@ import { Home } from "./pages/Home";
 import { Animals } from "./pages/Animals";
 import { Animal } from "./pages/Animal";
 import { animalsLoader } from "./loaders/animalsLoader";
-import { animalLoader } from "./loaders/animalLoader";
 
 export const router = createBrowserRouter([{
     path: "/",
@@ -23,8 +22,7 @@ export const router = createBrowserRouter([{
         },
         {
             path: "/animals/:id",
-            element: <Animal />,
-            loader: animalLoader
+            element: <Animal />
         }
     ]
 }]);

@@ -7,7 +7,7 @@
   justify-content: center;
   background-image: linear-gradient(
       to bottom,
-      rgb(255, 255, 255) 0,
+      rgb(225, 217, 186) 0,
       transparent 50%
     ),
     url("../../assets/pexels-pixabay-159414.jpg");
@@ -58,4 +58,19 @@
   color: rgb(237, 205, 255);
   margin-bottom: variables.$spacing-xl;
   margin-right: variables.$spacing-s;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    align-items: flex-start;
+    padding: 8rem 2rem 0 2rem;
+    background-image: linear-gradient(
+        to right,
+        rgb(48, 76, 48) 0,
+        transparent 60%
+      ),
+      url("../../assets/pexels-pixabay-159414.jpg");
+    background-size: cover;
+    background-position: left;
+  }
 }
