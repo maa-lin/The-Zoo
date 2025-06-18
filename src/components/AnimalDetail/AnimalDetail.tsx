@@ -1,8 +1,8 @@
-import { useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
 import { useContext, useState } from "react";
 import { AnimalContext } from "../../contexts/AnimalContext";
 import styles from "./AnimalDetail.module.scss";
-import { FaPaw } from "react-icons/fa";
+import { FaArrowLeft, FaPaw } from "react-icons/fa";
 import JSConfetti from "js-confetti";
 import { AnimalActionTypes } from "../../reducers/AnimalReducer";
 import { statusMessages } from "../../helpers/statusHelpers";
@@ -48,6 +48,7 @@ export const AnimalDetail = () => {
 
   return (
     <section className={styles["animal-card"]}>
+      <NavLink to={"/animals"} className={styles["animal-card__back"]}><button><FaArrowLeft /></button></NavLink>
       <div className={styles["animal-card__img-container"]}>
         {!brokenImg ? (
           <img

@@ -96,6 +96,33 @@
   opacity: 1;
 }
 
+.animal-card__back {
+  position: fixed;
+  top: 90px;
+  left: 20px;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+
+  button {
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    padding: variables.$spacing-xs variables.$spacing-s variables.$spacing-s;
+    text-align: center;
+    color: variables.$color-darkgreen;
+    background-color: rgba(243, 237, 208, 0.402);
+    box-shadow: 2px 2px 4px grey;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+
+    svg {
+      position: relative;
+      top: 3px;
+      font-size: variables.$font-size-m;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .animal-card {
     flex-direction: column;
@@ -109,5 +136,10 @@
 
   .animal-card__info {
     width: 100%;
+  }
+
+  .animal-card__back {
+    top: 110px;
+    left: 10px;
   }
 }
