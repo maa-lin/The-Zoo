@@ -71,7 +71,12 @@ Ha roligt, skratta och lär er massor!
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla krav för betyg VG. Den använder en router för att hantera olika sidor och layout, samt korrekt användning av child-routes och error-element. Djuren presenteras på en översiktssida och användaren kan klicka sig vidare till en djurdetaljsida. Djurens sista matningstider hanteras korrekt med reducer och context. Stilmässigt används SCSS tillsammans med variabler och komponenter för en ren och konsekvent design.
+📌 **Motivering:** Applikationen är välutvecklad och uppfyller både G- och VG-kraven. Routerhantering, context och reducers är implementerade. Custom hook eller tjänst används för datahantering, och presentationen är stilren och interaktiv.
 
 💡 **Förbättringsförslag:**  
-Inga större förbättringar behövs, men ett förslag är att testa fler CSS-ramverk eller tekniker som CSS-in-JS för att utöka sina kunskaper och färdigheter ytterligare.
+Koden har en hög nivå av kvalitet och de tekniker som används visar på en djup förståelse för frontend-utveckling. Här är några små förbättringsförslag: 
+
+1. Förbättra felhanteringen med fallback UI för oväntade API-fel som inte fångas av nuvarande logik.
+2. Konsolidera CSS/SASS-styling genom att undvika dubbletter och säkerställa enhetlighet där det är möjligt.
+3. Utveckla mer omfattande tester, såsom enhetstester, för att säkerställa stabiliteten och pålitligheten i komponenterna.
+4. Överväg att bryta ner längre komponenter i mindre, mer hanterbara delar för ökad överskådlighet och underhållbarhet.
