@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting...</title>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
     <script>
+      // Store the path and query
       sessionStorage.redirect =
         location.pathname + location.search + location.hash;
-      window.location.href = "/The-Zoo/";
+      // Redirect to the root of your GitHub Pages site
+      location.replace("/The-Zoo/");
     </script>
   </head>
-  <body></body>
+  <body>
+    <h1>Redirecting…</h1>
+  </body>
 </html>
